@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "nomodule.github.io",
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Ajay-Blog",
