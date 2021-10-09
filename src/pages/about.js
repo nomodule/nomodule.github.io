@@ -2,12 +2,11 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 
-export default function NotFound() {
+export default function About() {
   return (
     <Layout>
       <div>
-        <h2>404</h2>
-        <p>Sorry, that page doesn't exist</p>
+        <h1>About</h1>
       </div>
     </Layout>
   );
