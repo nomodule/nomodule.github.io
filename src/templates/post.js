@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+import dayjs from 'dayjs';
 import Layout from '../components/Layout';
 
 export default function Post({ data }) {
@@ -7,9 +8,11 @@ export default function Post({ data }) {
   const { title, date } = data.markdownRemark.frontmatter;
   return (
     <Layout>
-      <div style={{ border: '2px solid red' }}>
+      <div className="prose mt-16">
+        <time className="text-sm opacity-90">
+          {dayjs(date).format('DD/MMM/YYYY')}
+        </time>
         <h1>{title}</h1>
-        <time>{date}</time>
         <div dangerouslySetInnerHTML={{ __html: html }}></div>
       </div>
     </Layout>

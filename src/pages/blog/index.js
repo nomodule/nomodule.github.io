@@ -8,15 +8,21 @@ export default function Posts({ data }) {
   const contact = data.contact.siteMetadata.contact;
   return (
     <Layout>
-      <div>Projects</div>
-      <div className="flex flex-col border border-red-500">
-        {posts.map((post) => (
-          <Link to={'/blog/' + post.frontmatter.slug} key={post.id}>
-            {post.frontmatter.title}
-          </Link>
-        ))}
+      <div className="prose mt-16">
+        <h1>Blog</h1>
+        <div className="flex flex-col mt-2">
+          {posts.map((post) => (
+            <h2 key={post.id} className="">
+              <Link
+                className="block no-underline"
+                to={'/blog/' + post.frontmatter.slug}
+              >
+                {post.frontmatter.title}
+              </Link>
+            </h2>
+          ))}
+        </div>
       </div>
-      <p>Like what you see? Email me at {contact}</p>
     </Layout>
   );
 }

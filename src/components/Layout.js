@@ -3,10 +3,10 @@ import Navbar from './Navbar';
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <div className="w-full max-w-4xl mx-auto p-2">
       <Navbar />
-      <main>{children}</main>
-      <footer>Copyright 2021</footer>
+      <main className="min-h-screen">{children}</main>
+      <footer className="h-16">&nbsp;</footer>
     </div>
   );
 }

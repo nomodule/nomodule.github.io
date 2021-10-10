@@ -1,14 +1,12 @@
 import * as React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 
-// markup
 const IndexPage = () => {
   return (
     <Layout>
-      <div>
-        <h1 className="text-red-500">Hi, I'm Ajay</h1>
-        <StaticImage src={'../images/ajay.jpg'} alt="" />
+      <div className="prose mt-16">
+        <h1>Hi, I'm Ajay</h1>
+        <p>I'm working as a frontend developer at ResponseIQ</p>
       </div>
     </Layout>
   );

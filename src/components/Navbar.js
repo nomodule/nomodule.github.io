@@ -12,15 +12,41 @@ export default function Navbar() {
     }
   `);
 
-  const { title } = data.site.siteMetadata;
   return (
-    <nav>
-      <h1>{title}</h1>
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
-      </div>
-    </nav>
+    <div className="flex items-center h-16">
+      <h1 className="">
+        <Link className="" to="/">
+          Ajay.
+        </Link>
+      </h1>
+      <nav className="ml-auto">
+        <ul className="flex">
+          <li>
+            <Link
+              className="block p-1 px-3 rounded hover:bg-green-500 hover:text-white"
+              to="/"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="block p-1 px-3 rounded hover:bg-green-500 hover:text-white"
+              to="/about"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="block p-1 px-3 rounded hover:bg-green-500 hover:text-white"
+              to="/blog"
+            >
+              Blog
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }
